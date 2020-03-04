@@ -1,0 +1,66 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+  "id": "501e3166-7a34-4b2d-bec0-0ebbff48dafb",
+  "name": "AnchoreTask",
+  "friendlyName": "Anchore Task",
+  "description": "Task for Integrating with Anchore Engine",
+  "helpMarkDown": "",
+  "category": "Utility",
+  "author": "Santhosh Parepu",
+  "version": {
+    "Major": 1,
+    "Minor": 4,
+    "Patch": 5
+  },
+  "visibility": ["Build", "Release"],
+  "instanceNameFormat": "Analyzing Image with Anchore",
+  "groups": [
+    {
+      "name": "vuln",
+      "displayName": "Vulnerability Check"
+    }
+  ],
+  "inputs": [
+    {
+      "name": "anchoreUrl",
+      "type": "string",
+      "label": "Anchore Engine Url",
+      "required": true,
+      "helpMarkDown": "The Url for the Anchor Engine Api"
+    },
+    {
+      "name": "anchoreUser",
+      "type": "string",
+      "label": "Anchore Engine User",
+      "required": true,
+      "helpMarkDown": "The User for accessing the Anchor Engine Api"
+    },
+    {
+      "name": "anchorePassword",
+      "type": "string",
+      "label": "Anchore Engine Password",
+      "required": true,
+      "helpMarkDown": "The Password for accessing the Anchor Engine Api"
+    },
+    {
+      "name": "imageName",
+      "type": "string",
+      "label": "Analyze Image",
+      "required": true,
+      "helpMarkDown": "The Image to Analyze - must be stored in a registered registry"
+    },
+    {
+      "name": "doPolicyScan",
+      "type": "boolean",
+      "label": "Execute Policy Scan",
+      "required": false,
+      "defaultValue": "false",
+      "helpMarkDown": "Perform a policy scan for the image"
+    }
+  ],
+  "execution": {
+    "Node": {
+      "target": "dist/index.js"
+    }
+  }
+}
