@@ -25,30 +25,6 @@ This is the password used to authenticate to the Anchore Engine API. As with the
 
 This is the image that will be targeted for analysis during execution. You will want to use build variables to ensure the correct image can be targeted. Note that for Anchore Engine to analyze the image it must __**FIRST**__ be pushed to an accessible registry. For private registries, the registry will need to be registered with Anchore to permit access. More Information (https://docs.anchore.com/current/docs/engine/usage/cli_usage/registries/)
 
-**Perform a vulernability scan for the image**
-
-Indicates whether the task should perform a Vulnerability Check following the analysis step.
-
-**Min High Allowed (Available if Vuln scan performed)**
-
-The minimum number of High Vulnerabilities to allow before the Task fails. If left empty, no limit is enforced
-
-**Min Medium Allowed (Available if Vuln scan performed)**
-
-The minimum number of Medium Vulnerabilities to allow before the Task fails. If left empty, no limit is enforced
-
-**Min Low Allowed (Available if Vuln scan performed)**
-
-The minimum number of Low Vulnerabilities to allow before the Task fails. If left empty, no limit is enforced
-
-**Min Negligibile Allowed (Available if Vuln scan performed)**
-
-The minimum number of Negligible Vulnerabilities to allow before the Task fails. If left empty, no limit is enforced
-
-**Vuln Report Export Path**
-
-Indicates where the task should output the results of the Vulnerability Scan - HTML report
-
 ## How the Task Works
 
 #### Prerequisites

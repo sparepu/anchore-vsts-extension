@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "anchore-task",
-  "name": "Anchore Image Scanning",
+  "name": "Anchore Image Scanner",
   "version": "1.0.0",
   "publisher": "santhoshparepu",
   "targets": [
