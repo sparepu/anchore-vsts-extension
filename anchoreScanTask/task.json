@@ -60,7 +60,7 @@
   ],
   "execution": {
     "Node": {
-      "target": "dist/index.js"
+      "target": "dist/index.ts"
     }
   }
 }
