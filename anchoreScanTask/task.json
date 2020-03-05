@@ -9,8 +9,8 @@
   "author": "Santhosh Parepu",
   "version": {
     "Major": 1,
-    "Minor": 4,
-    "Patch": 5
+    "Minor": 0,
+    "Patch": 0
   },
   "visibility": ["Build", "Release"],
   "instanceNameFormat": "Analyzing Image with Anchore",
@@ -60,7 +60,7 @@
   ],
   "execution": {
     "Node": {
-      "target": "dist/index.ts"
+      "target": "dist/index.js"
     }
   }
 }
